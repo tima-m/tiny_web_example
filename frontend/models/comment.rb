@@ -10,8 +10,8 @@ class Comment < Sequel::Model
 
   private
   def before_validation
-    if self.display_name.size > 10
-      errors.add(:display_name, "size must be 10 or less.")
+    if self.display_name.size > 100
+      errors.add(:display_name, "size must be 100 or less.")
     end
 
     super
