@@ -9,7 +9,7 @@ describe Webapi::Models::Comment do
     expect(comment).to eq(Webapi::Models::Comment[comment.id])
   end
 
-  it "validation display_name size must be 10 or less." do
+  it "validation display_name size must be 100 or less." do
      expect { Webapi::Models::Comment.create(:display_name => "spec test 2",
                                              :comment => "test comment.") }.to raise_error(Sequel::ValidationFailed)
   end
