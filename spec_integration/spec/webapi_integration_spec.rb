@@ -43,14 +43,14 @@ describe 'Webapi Integration spec' do
    end
    it 'update api not allowed' do
      res = WebAPIClient::Comment.update(comment["id"], comment_params)
-     expect(res["code"]).to eq 405
+     expect(res["code"]).to eq 400
    end
   end
 
   describe 'delete' do
    it 'delete api not allowed' do
      res = WebAPIClient::Comment.delete(comment["id"])
-     expect(res["code"]).to eq 405
+     expect(res["code"]).to eq 400
    end
   end
 end
